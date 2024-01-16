@@ -71,7 +71,7 @@ public class RouteFilter implements Filter {
         HttpServletResponse httpResponse = (HttpServletResponse) response;
         String url = httpRequest.getServletPath();
         if (url.endsWith(".jsp")) {
-            httpResponse.sendRedirect(httpRequest.getContextPath() + "/home");
+            httpResponse.sendRedirect(httpRequest.getContextPath() + "/");
         }
         chain.doFilter(request, response);
     }
